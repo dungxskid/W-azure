@@ -1,7 +1,7 @@
 repeat wait()
 until getgenv().LoadUi and getgenv().IslandCaller and getgenv().SettingManager 
-local Title = "W-azure" .. (getgenv().Premium and " [Premium]" or "")
-local SubTitle = "True V2 discord.gg/w-azure"
+local Title = "rexus" .. (getgenv().beta and " [beta]" or "")
+local SubTitle = "by realdungz"
 local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/vinhuchi/rblx/main/FixedFluent.lua"))()
 local UiSetting = Fluent.Options
 local IslandCaller = IslandCaller or getgenv().IslandCaller
@@ -25,11 +25,11 @@ end
 
 local UiIntilize = {
     ["Main Farm"] = {
-        {Mode="Label",Title="Only Turn On 1 Farm At The Same Time"},
+        {Mode="Label",Title="welcome to rexus hub"},
         {Mode="Toggle",Title="Auto Katakuri",Description="Turn On Auto Kill Cake Prince And Auto Kill Dough King By Default",Args={"Katakuri","Enable"}},
         {Mode="Toggle",Title="Auto Bone",Description="",Args={"Bone","Enable"}},
-        {Mode="Toggle",Title="Kill Aura",Description="Farm Near Lv Mob Or Near Position",Args={"Kill Aura","Enable"}},
-        {Mode="Toggle",Title="Fully Auto Dough King",Description="",Args={"Full Dough King","Enable"}},
+        {Mode="Toggle",Title="farm near",Description="Farm Near Lv Mob Or Near Position",Args={"Kill Aura","Enable"}},
+        {Mode="Toggle",Title=" Auto Dough King a-z",Description="",Args={"Full Dough King","Enable"}},
         {Mode="Label",Title="Setting For Auto Farm"},
         {Mode="Label",Title="Anchor Position"},
         {Mode="Toggle",Title="TP Back Anchor Position",Description="If Exceed Anchor Position Will Tp Back To Anchor Position",Args={"Kill Aura","AnchorTPBack"}},
@@ -101,7 +101,7 @@ local UiIntilize = {
         {Mode="Toggle",Title="Auto Soul Reaper",Args = {"Soul Reaper","Enable"}},
         {
             Mode = "Dropdown",
-            Title = "Select Boss To Snipe",
+            Title = "Select Boss To atack",
             Multi = true, 
             Table = AllBoss[tostring(game.PlaceId)],
             Default = getgenv().Setting.BossSniper.SelectedBoss or {},
@@ -127,7 +127,7 @@ local UiIntilize = {
         {Mode="Toggle",Title="Auto Ghoul",Description="Travel To Sea2 and Stack Farming Until Have Ghoul", Args = {"Get Ghoul","Enable"}},
         {Mode="Toggle",Title="Auto Soul Guitar",Args = {"Soul Guitar","Enable"}},
         {Mode="Toggle",Title="Auto Soul Guitar Material",Args = {"Material Soul Guitar","Enable"}},
-        {Mode="Toggle",Title="Auto CDK (DO NOT USE TESTING)",Args = {"CDK","Enable"}},
+        {Mode="Toggle",Title="Auto CDK (may not work)",Args = {"CDK","Enable"}},
         
         --{Mode="Toggle",Title="Auto Collect Gift", Description="Sea 3 Function Event",Args = {"Winter Event","Enable"}}
     },
@@ -177,7 +177,7 @@ local UiIntilize = {
             end
         },        
 
-        {Mode="Toggle",Title="Insta Tp Chest",Description="Have A Risk Of Getting Banned(Noone yet)",Args={"Collect Chest","InstaTP"}},
+        {Mode="Toggle",Title="bypass Tp Chest",Description="Have A Risk Of Getting Banned(Noone yet)",Args={"Collect Chest","InstaTP"}},
         {Mode="Toggle",Title="Auto Level Observation",Description="Farm Observation Level Till Max",Args={"Level Observation","Enable"}},
         {Mode="Toggle",Title="Level Observation Hop",Description="Hopping For leveling Observation",Args={"Level Observation","Hop"}},
         {Mode="Toggle",Title="Auto Observation V2",Description="Must Have Maxed Ken Haki + Finish Citizen Quest",Args = {"Evolve Observation","Enable"}},
@@ -201,13 +201,13 @@ local UiIntilize = {
         {Mode="Label",Title="FullMoon Status"},
     },
     ["Player-Status"] = {
-        {Mode="Label",Title="W.I.P"}
+        {Mode="Label",Title="i was tired for code this script(wait me code)"}
     },
     ["Fruit"] = {
         {
             Mode = "Toggle",
-            Title = "Auto Collect Fruit",
-            Description = "Stackable With Auto Farm",
+            Title = "Auto get Fruit",
+            Description = "can turn on With Auto Farm...",
             Args = {"GetFruit", "Enable"},
             OnChange = function(state)
                 getgenv().Setting.GetFruit.Enable = state
@@ -223,17 +223,17 @@ local UiIntilize = {
         },
         {
             Mode = "Toggle",
-            Title = "Snipe Fruit",
+            Title = "buy Fruit",
             Args = {"Fruit", "EnableSnipeFruit"},
-            Description = "Auto Buy Fruit If In The List And You Dont Have Fruit In That List",
+            Description = "Auto Buy Fruit in normal fruit shop",
             OnChange = function(state)
                 getgenv().Setting.Fruit.EnableSnipeFruit = state
             end
         },
         {
             Mode = "Toggle",
-            Title = "Snipe Mirage Fruit [Premium]",
-            Description = "Stackable with Auto Farm, Snipe If In Mirage Fruit Stock And Mirage Dealer Appear",
+            Title = "buy Mirage Fruit",
+            Description = "can turn on with Auto Farm, buy If In Mirage Fruit Stock ",
             Args = {"Mirage Snipe Fruit", "Enable"},
             OnChange = function(state)
                 getgenv().Setting["Mirage Snipe Fruit"].Enable = state
@@ -242,7 +242,7 @@ local UiIntilize = {
         },
         {
             Mode = "Dropdown",
-            Title = "Select Fruit To Snipe",
+            Title = "Select Fruit To buy",
             Multi = true, 
             Table = FruitTable,
             Default = getgenv().Setting.Fruit.FruitsToSnipe or {},
@@ -335,7 +335,7 @@ local UiIntilize = {
         },
         {
             Mode = "Toggle",
-            Title = "Water Walker",
+            Title = "Walk on water",
             Args = {"LocalPlayer", "WaterWalker"},
             OnChange = function(state)
                 getgenv().Setting.LocalPlayer.WaterWalker = state
@@ -393,7 +393,7 @@ local UiIntilize = {
         {
 
             Mode = "Toggle",
-            Title = "Change Dash Rage",
+            Title = "Change Dash Range",
             Args = {"LocalPlayer", "DoDashRange"},
             OnChange = function(state)
                 getgenv().Setting.LocalPlayer.DoDashRange = state
@@ -423,7 +423,7 @@ local UiIntilize = {
         {
 
             Mode = "Toggle",
-            Title = "Infinity Geppo",
+            Title = "Inf Geppo",
             Args = {"LocalPlayer", "InfGeppo"},
             OnChange = function(state)
                 getgenv().Setting.LocalPlayer.InfGeppo = state
@@ -499,7 +499,7 @@ local UiIntilize = {
         },
         {
             Mode = "Toggle",
-            Title = "Auto Shoot Gun(100%)",
+            Title = "Auto Shoot Gun",
             Args = {"Pvp", "AutoShootGun"},
             OnChange = function(state)
                 getgenv().Setting.Pvp.AutoShootGun = state
@@ -508,7 +508,7 @@ local UiIntilize = {
         },
         {
             Mode = "Toggle",
-            Title = "Silent Aim Near Player",
+            Title = " Aim Near Player",
             Args = {"Pvp", "SilentAimNear"},
             OnChange = function(state)
                 getgenv().Setting.Pvp.SilentAimNear = state
@@ -517,8 +517,8 @@ local UiIntilize = {
         },
         {
             Mode = "Toggle",
-            Title = "Auto Kill Near Player [Premium]",
-            Description = "Use Very Fast Attack",
+            Title = "Auto Kill Near Player",
+            Description = "",
             Args = {"Pvp", "AutoKillNear"},
             OnChange = function(state)
                 getgenv().Setting.Pvp.AutoKillNear = state
@@ -527,7 +527,7 @@ local UiIntilize = {
         },
         {
             Mode = "Toggle",
-            Title = "Only Shoot In Shootable Distance",
+            Title = "Only Shoot In shoot Distance",
             Args = {"Pvp", "GunDistanceCheck"},
             OnChange = function(state)
                 getgenv().Setting.Pvp.GunDistanceCheck = state
@@ -580,10 +580,10 @@ local UiIntilize = {
             end
         }
     },
-    ["Raid-Material"] = {
+    ["Raid & Material"] = {
         {
             Mode = "Label",
-            Title = "Selected Material",
+            Title = "Select Material",
         },
         {
             Mode = "Toggle",
@@ -600,7 +600,7 @@ local UiIntilize = {
         end},
         {
             Mode = "Label",
-            Title = "Selected Chip",
+            Title = "Select Chip",
             Content = getgenv().Setting.Raid.Select or ""
         },
         {Mode="Dropdown",Title="Select",Table={"Flame","Ice","Sand","Quake","Light","Dark","String","Rumble","Magma","Human: Buddha","Bird: Phoenix","Dough"},OnChange=function (state)
@@ -619,7 +619,7 @@ local UiIntilize = {
         },
         {
             Mode = "Button",
-            Title = "Select Current Fruit Chip",
+            Title = "Select your Fruit Chip",
             Callback = function()
                 getgenv().Setting.Raid.Select = getgenv().IslandVariable.AutoChip[LP.Data.DevilFruit.Value] or ""
                 SettingManager:Save()
@@ -628,7 +628,7 @@ local UiIntilize = {
         {
             Mode = "Toggle",
             Title = "No Delay Next Island",
-            Description = "May Get Reseted if You Turn Off This",
+            Description = "May Get Reset if You Turn Off This",
             Args = {"Raid", "NoDelay"},
             OnChange = function(state)
                 getgenv().Setting.Raid.NoDelay = state
@@ -657,14 +657,14 @@ local UiIntilize = {
     ["Sea Events"] = {
         {
             Mode = "Button",
-            Title = "Tp Your Ship To Current Pos",
+            Title = "Tp Your Current Ship ",
             Callback = function()
                 IslandCaller("TPCurrentShip")
             end
         },
         {
             Mode = "Button",
-            Title = "Remove Sea Terror Effect",
+            Title = "Remove Terror shark Effect",
             Callback = function()
                 if game.Lighting:FindFirstChild("SeaTerrorCC") then
                     game.Lighting.SeaTerrorCC:Destroy()
@@ -673,14 +673,14 @@ local UiIntilize = {
         },
         {
             Mode = "Button",
-            Title = "Change Night Atmosphere",
+            Title = "Change Night effect",
             Callback = function()
                 IslandCaller("NightAtmosphere")
             end
         },
         {
             Mode = "Button",
-            Title = "Change Dark Atmosphere",
+            Title = "Change Dark effect",
             Callback = function()
                 IslandCaller("DarkAtmosphere")
             end
@@ -717,8 +717,8 @@ local UiIntilize = {
         end},
         {
             Mode = "Toggle",
-            Title = "Start Farming Sea Event",
-            Description = "For Farming Sharks, Piranha, Terror Shark, SeaBeast, Ship",
+            Title = "auto Sea Event",
+            Description = "Farm Sharks, Piranha, Terror Shark, SeaBeast, Ship",
             Args = {"SeaEvents", "StartSeaEvents"},
             OnChange = function(state)
                 getgenv().Setting.SeaEvents.StartSeaEvents = state
@@ -728,7 +728,7 @@ local UiIntilize = {
        --[[ {
             Mode = "Toggle",
             Title = "Auto Spawn Ship",
-            Description = "For Farming Sharks, Piranha, Terror Shark",
+            Description = "For Farm Sharks, Piranha, Terror Shark",
             Args = {"SeaEvents", "AutoBuyShip"},
             OnChange = function(state)
                 getgenv().Setting.SeaEvents.AutoBuyShip = state
@@ -738,7 +738,7 @@ local UiIntilize = {
         {
             Mode = "Toggle",
             Title = "Auto Tp Ship To Zone 6",
-            Description = "Insta TP Ship, Must Not Have Any Players In Ship Or Errors",
+            Description = "bypass TP Ship, Must Not Have Any Players In Ship or get Errors",
             Args = {"SeaEvents", "AutoTpShip"},
             OnChange = function(state)
                 getgenv().Setting.SeaEvents.AutoTpShip = state
@@ -836,7 +836,7 @@ local UiIntilize = {
         },
         {
             Mode = "Toggle",
-            Title = "Auto Escape Rough Sea",
+            Title = "Auto out Rough Sea",
             Args = {"SeaEvents", "AutoEscapeRoughSea"},
             OnChange = function(state)
                 getgenv().Setting.SeaEvents.AutoEscapeRoughSea = state
@@ -846,7 +846,7 @@ local UiIntilize = {
         --[[{
             Mode = "Toggle",
             Title = "Only Farm Near",
-            Description = "Only Farm Near Mobs So You Dont Have To Deal With Far Mobs That Aren't From Yours",
+            Description = "Only Farm Near Mobs",
             Args = {"SeaEvents", "OnlyFarmNearMob"},
             OnChange = function(state)
                 getgenv().Setting.SeaEvents.OnlyFarmNearMob = state
@@ -855,17 +855,17 @@ local UiIntilize = {
         },]]
         {
             Mode = "Label",
-            Title = "Leviathan Section"
+            Title = "Leviathan "
         },
         --{
          --   Mode = "Button",
            -- Title = "Tween Ship To Tiki",
-        --    Description = "For Transporting Heart",
+        --    Description = "tween Heart to tiki",
         --},
         {
             Mode = "Button",
             Title = "Tp To Frozen island",
-            Description = "It Must Spawn First",
+            Description = " Must Spawn First",
             Callback = function()
                 IslandCaller("TPLeviathanIsland")
             end
@@ -873,7 +873,7 @@ local UiIntilize = {
         {
             Mode = "Toggle",
             Title = "Auto Find Leviathan",
-            Description = "Leviathan",
+            Description = "Leviathan :))",
             Args = {"SeaEvents", "AutoFindLeviathan"},
             OnChange = function(state)
                 getgenv().Setting.SeaEvents.AutoFindLeviathan = state
@@ -883,7 +883,7 @@ local UiIntilize = {
         {
             Mode = "Toggle",
             Title = "Auto Leviathan",
-            Description = "Leviathan",
+            Description = "atack levi",
             Args = {"SeaEvents", "Leviathan"},
             OnChange = function(state)
                 getgenv().Setting.SeaEvents.Leviathan = state
@@ -892,8 +892,8 @@ local UiIntilize = {
         },
         {
             Mode = "Toggle",
-            Title = "Multi Segments Attack",
-            Description = "More",
+            Title = "Multi levi Segments Attack",
+            Description = "must turn on auto leviathan",
             Args = {"SeaEvents", "MultiSegmentAttack"},
             OnChange = function(state)
                 getgenv().Setting.SeaEvents.MultiSegmentAttack = state
@@ -902,12 +902,12 @@ local UiIntilize = {
         },
         {
             Mode = "Label",
-            Title = "Kitsune Section"
+            Title = "kitsune"
         },
         {
             Mode = "Button",
             Title = "Tween To Kitsune Island",
-            Description = "",
+            Description = "must have",
             Callback = function()
 
             end
@@ -924,7 +924,7 @@ local UiIntilize = {
         },
         {
             Mode = "Toggle",
-            Title = "Auto Start Kitsune When In Island",
+            Title = "Auto Start Kitsune ",
             Args = {"SeaEvents", "AutoStartKitsune"},
             OnChange = function(state)
                 getgenv().Setting.SeaEvents.AutoStartKitsune = state
@@ -942,7 +942,7 @@ local UiIntilize = {
         },
         {
             Mode = "Dropdown",
-            Title = "Azure Trade Min",
+            Title = "Azure Trade limit",
             Args = {"SeaEvents", "AzureEmberLimit"},
             Table = {15,20,25,30},
             Default = (function ()
@@ -1042,7 +1042,7 @@ local UiIntilize = {
         }
     
     },
-    ["RaceV4-Mirage"] = {
+    ["RaceV4 & Mirage"] = {
         {
             Mode = "Button",
             Title = "TP To Gear",
@@ -1069,7 +1069,7 @@ local UiIntilize = {
         },
         {
             Mode = "Toggle",
-            Title = "Fully Auto Unlock Race v4 Entrance",
+            Title = " Auto Unlock Race v4 Entrance a-z",
             Args = {"FullyRaceV4_Entrance", "Enable"},
         },
         {
@@ -1104,8 +1104,8 @@ local UiIntilize = {
         end},
         {
             Mode = "Toggle",
-            Title = "Fully Auto Finish Trial [Premium]",
-            Description = "Train, Auto Kill After Trial, Auto Activate Race",
+            Title = " Auto Finish Trial a-z",
+            Description = "train, Auto Kill After Trial, Auto Activate Race,...",
             Args = {"FullyAutoTrial", "Enable"},
             OnChange = function(state)
                 if IsPremium then
@@ -1143,7 +1143,7 @@ local UiIntilize = {
         },
         {
             Mode = "Toggle",
-            Title = "Auto Kill After Trial [Premium]",
+            Title = "Auto Kill After Trial ",
             Args = {"Trial", "AutoKill"},
             OnChange = function(state)
                 getgenv().Setting.Trial.AutoKill = state
@@ -1176,7 +1176,7 @@ local UiIntilize = {
         },
         {
             Mode = "Button",
-            Title = "TP Current Race Entrance",
+            Title = "TP Current Race door",
             Callback = function()
                 IslandCaller("TPCurrentEntrance")
             end
@@ -1241,47 +1241,8 @@ local UiIntilize = {
         
        --[[ {
             Mode = "Toggle",
-            Title = "Auto Trade X2 Exp (Candy)",
-            Args = {"Shop", "Candy X2 EXP"},
-            OnChange = function(state)
-                getgenv().Setting.Shop["Candy X2 EXP"] = state
-                SettingManager:Save()
-            end
-        },
-        {
-            Mode = "Toggle",
-            Title = "Auto Trade 500 Fragments (Candy)",
-            Args = {"Shop", "Candy 500 Fragments"},
-            OnChange = function(state)
-                getgenv().Setting.Shop["Candy 500 Fragments"] = state
-                SettingManager:Save()
-            end
-        },
-        {
-            Mode = "Button",
-            Title = "Stats Refund( Candy)",
-            Description = "75 Candy",
-            Callback = function()
-                local args = {
-                    [1] = "Candies",
-                    [2] = "Buy",
-                    [3] = 1,
-                    [4] = 2
-                }
-                
-                game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))            
-            end
-        },
-        {
-            Mode = "Button",
-            Title = "Reroll Race( Candy)",
-            Description = "100 Candy",
-            Callback = function()
-                game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer("Candies","Buy",1,3)         
-            end
-
-            
-        },]]
+            Title ="buff luck x10000%"
+    },]]
         {
             Mode = "Button",
             Title = "Stats Refund",
@@ -1316,7 +1277,7 @@ local UiIntilize = {
     ["Setting"] = {
         {
             Mode = "Label",
-            Title = "Tween Section"
+            Title = "Tween "
         },
         {
             Mode = "Dropdown",
@@ -1339,9 +1300,9 @@ local UiIntilize = {
             end
         },
         {
-            Mode = "Toggle",
-            Title = "Tween Pause",
-            Description = "Prevent Security Kick",
+            Mode = "Label",
+            Title = "Tween bypass",
+            Description = "shouldn't to use",
             Args = {"Tween", "Pause"},
             OnChange = function(state)
                 getgenv().Setting.Tween.Pause = state
@@ -1350,12 +1311,12 @@ local UiIntilize = {
         },
         {
             Mode = "Label",
-            Title = "Bring Mob Section"
+            Title = "Bring Mob "
         },
         {
             Mode = "Toggle",
             Title = "Bring Mob",
-            Description = "Not Recommended May Error But Works If in PS",
+            Description = "Not Recommend May Error But Works If in PS",
             Args = {"BringMob", "Enable"},
             OnChange = function(state)
                 getgenv().Setting.BringMob.Enable = state
@@ -1375,12 +1336,12 @@ local UiIntilize = {
             end
         },
         {
-            Mode = "Label",
-            Title = "Fast Attack Section"
+         Mode = "Label",
+            Title = "Fast Attack S"
         },
         {
             Mode = "Toggle",
-            Title = "Stop Clicking",
+            Title = "Stop Click",
             Args = {"FastAttack", "StopClick"},
             OnChange = function(state)
                 getgenv().Setting.FastAttack.StopClick = state
@@ -1397,9 +1358,9 @@ local UiIntilize = {
             end
         },
         {
-            Mode = "Toggle",
-            Title = "Very Fast Attack",
-            Description = " Dont Use, Just Change Fast Attack % Time to 100%",
+            Mode = "Label",
+            Title = "may update",
+            Description = " :))",
             Args = {"FastAttack", "SupremeAttack"},
             OnChange = function(state)
                 getgenv().Setting.FastAttack.SupremeAttack = state
@@ -1407,9 +1368,9 @@ local UiIntilize = {
             end
         },
        {
-            Mode = "Toggle",
-            Title = "Old Fast Attack",
-            Description = "Use Less For Now",
+            Mode = "Label",
+            Title = "may update",
+            Description = ":))",
             Args = {"FastAttack", "OldFastAttack"},
             OnChange = function(state)
                 getgenv().Setting.FastAttack.OldFastAttack = state
@@ -1471,7 +1432,7 @@ local UiIntilize = {
         },
         {
             Mode = "Label",
-            Title = "Mastery Position",
+            Title = "Mastery ",
             Args = {"FastAttack", "TimeToAttack"},
 
         },
@@ -1528,8 +1489,8 @@ local UiIntilize = {
         },
         {
             Mode = "Toggle",
-            Title = "Click For fruit",
-            Description = "For Kitsune, Mammoth, Light, Ice, ...",
+            Title = "Click For fruit(may not work)",
+            Description = "For Kitsune,yeti,dragon,gas ...",
             Args = {"SkillsSettingRemake","ClickFruit"},
             OnChange = function(state)
                 SettingManager:Save()
@@ -1576,21 +1537,21 @@ local UiIntilize = {
     ["Game-Server"] = {
         {
             Mode = "Button",
-            Title = "Copy Job Id",
+            Title = "Copy Job Id server",
             Callback = function ()
                 setclipboard(tostring(game.JobId))
             end
         },
         {
-            Mode = "TextBox",
-            Title = "Server Code [Premium]",
+            Mode = "label",
+            Title = "may update",
             Callback = function(arg)
                 getgenv().PreServerCode = arg
             end
         },
         {
-            Mode = "Toggle",
-            Title = "Join Server Code",
+            Mode = "Label",
+            Title = "may update too :)",
             Args = {"Misc","__PreJoin"},
             OnChange = function(state)
                 SettingManager:Save()
@@ -1598,10 +1559,10 @@ local UiIntilize = {
         },
         {
             Mode = "Button",
-            Title = "Clear Server Code",
+            Title = "clear job id",
             Callback = function(arg)
                 local _, err = pcall(function ()
-                    ElementsCollection["Game-Server"]["Server Code [Premium]"]:SetValue("")
+                    ElementsCollection["game:GetService("ReplicatedStorage").__ServerBrowser:InvokeServer("teleport",a)"
                 end)
                 if err then
                     print(err)
@@ -1634,7 +1595,7 @@ local UiIntilize = {
         {
             Mode = "Toggle",
             Title = "Remove Effect (Fluxus Only)",
-            Description = "Disable And Rejoin To Get The Effect Back If You Want Effects",
+            Description = "remove all effect in game",
             Args = {"Misc", "__RemoveEffects"},
             OnChange = function(state)
                 getgenv().Setting.Misc.__RemoveEffects = state
@@ -1661,7 +1622,7 @@ local UiIntilize = {
         },
         {
             Mode = "Toggle",
-            Title = "Disable DMG Counter",
+            Title = "Disable DMG ",
             Args = {"Misc", "__RemoveDMGCounter"},
             OnChange = function(state)
                 getgenv().Setting.Misc.__RemoveDMGCounter = state
@@ -1690,209 +1651,13 @@ local UiIntilize = {
             end
         },
     },
-    ["One Click"] = {
+    ["Kaitun"] = {
         {
-            Mode = "Toggle",
-            Title = "Start One Click",
-            Description = "Do Not Farm Levels Too Fast Or Enjoy Getting Reseted",
-            Args = {"OneClick", "Enable"},
-            OnChange = function(state)
-                getgenv().Setting.OneClick.Enable = state
-                SettingManager:Save()
-            end
-        },
-        {
-            Mode = "Toggle",
-            Title = "Remove limit 1 Minute Get Quest",
-            Description = "Turn This On = Farm Faster But May Get Reseted",
-            Args = {"OneClick", "UnlimitGetQuest"},
-            OnChange = function(state)
-                getgenv().Setting.OneClick.UnlimitGetQuest = state
-                SettingManager:Save()
-            end
-        },
-        {
-            Mode = "Toggle",
-            Title = "Triple Quests",
-            Description = "Only use this if you only farm for a while or get reseted",
-            Args = {"OneClick", "TripleQuest"},
-            OnChange = function(state)
-                getgenv().Setting.OneClick.TripleQuest = state
-                SettingManager:Save()
-            end
-        },
-        {
-            Mode = "Toggle",
-            Title = "Auto Add Stats",
-            Description = "Melee -> Health, The Last One You Chose",
-            Args = {"OneClick", "AutoAddStats"},
-            OnChange = function(state)
-                getgenv().Setting.OneClick.AutoAddStats = state
-                SettingManager:Save()
-            end
-        },
-        {
-            Mode = "Toggle",
-            Title = "Disable Melees Switcher",
-            Description = "Melees Switcher Is For God Human, Turn Off If You Only Want To Farm A Melee",
-            Args = {"OneClick", "DisableMeleeSwitcher"},
-            OnChange = function(state)
-                getgenv().Setting.OneClick.DisableMeleeSwitcher = state
-                SettingManager:Save()
-            end
-        },
-        {
-            Mode = "Toggle",
-            Title = "Farms All Melee 600 Mastery",
-            Description = "Melee -> Health, The Last One You Chose",
-            Args = {"OneClick", "Melee600Mastery"},
-            OnChange = function(state)
-                getgenv().Setting.OneClick.Melee600Mastery = state
-                SettingManager:Save()
-            end
-        },
-        {
-            Mode = "Toggle",
-            Title = "Hop For Library Key / Water Key",
-            Description = "",
-            Args = {"OneClick", "Sea2KeyHop"},
-            OnChange = function(state)
-                getgenv().Setting.OneClick.Sea2KeyHop = state
-                SettingManager:Save()
-            end
-        },
-        {
-            Mode = "Button",
-            Title = "Redeem All Codes",
-            Callback = function()
-                IslandCaller("RedeemAllCode")
-
-            end
-        }
-    }
-}
-print("Adding Shop Items")
-for _,v in pairs(getgenv().IslandVariable.Items) do 
-    for i,t in pairs(v) do
-        table.insert(UiIntilize["Shop"],{
             Mode = "Label",
-            Title = i .. " Section",
-        })
-        local AllMelees = {}
-        local Caller ={}
-        for _,v2 in pairs(t) do
-            table.insert(AllMelees,v2.Name)
-            Caller[v2.Name]=v2.Args
-        end
-        table.insert(UiIntilize["Shop"],{Mode="Dropdown",Title=i,Table=AllMelees,OnChange=function (state)
-            if Caller[state] then
-                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(table.unpack(Caller[state]))
-            end
-        end})
-    end
-end
-print("Building Ui")
-
-local BuildUI = function (Tab,i,v,Name)
-
-    if v.Mode == "Toggle" then
-        local pointer = getgenv().Setting
-        local args = v.Args
-        for i = 1, #args - 1 do
-            pointer = pointer[args[i]]
-        end
-        local BuildToggle = {}
-        BuildToggle.Title = v.Title
-        BuildToggle.Default = pointer[args[#args]]
-        if v.Description then
-            BuildToggle.Description  = v.Description
-        end
-        ElementsCollection[Name][v.Title] =  Tab:AddToggle(v.Title, BuildToggle)
-        ElementsCollection[Name][v.Title]:OnChanged(function()
-            pointer[args[#args]] = UiSetting[v.Title].Value
-            if not v.NoSave then
-                SettingManager:Save()
-            end
-        end)
-    elseif v.Mode == "Label" then 
-        local BuildLabel = {}
-        BuildLabel.Title=v.Title
-        if v.Content then
-            BuildLabel.Content = v.Content
-        end
-        ElementsCollection[Name][v.Title] = Tab:AddParagraph(BuildLabel)
-    elseif v.Mode == "Button" then
-        local BuildButton = {}
-        BuildButton.Title = v.Title
-        BuildButton.Callback = v.Callback
-        if v.Description then 
-            BuildButton.Description = v.Description
-        end
-        ElementsCollection[Name][v.Title]  = Tab:AddButton(BuildButton) 
-    elseif v.Mode == "Slider" then
-        local BuildSlider = {}
-        BuildSlider.Title = v.Title
-
-        if v.Description then 
-            BuildSlider.Description = v.Description
-        end
-        if v.Default then
-            BuildSlider.Default = v.Default
-        end
-        BuildSlider.Min = v.Min
-        BuildSlider.Max = v.Max
-        BuildSlider.Rounding = 1
-        ElementsCollection[Name][v.Title]  = Tab:AddSlider(v.Title,BuildSlider)  
-        ElementsCollection[Name][v.Title]:OnChanged(function (v2)
-            v.OnChange(tonumber(v2))
-        end)
-    elseif v.Mode == "Dropdown" then
-        local BuildDropdown = {}
-        BuildDropdown.Title = v.Title
-
-        if v.Description then 
-            BuildDropdown.Description = v.Description
-        end
-        if v.Multi then
-            BuildDropdown.Multi = v.Multi 
-        end
-        if v.Default then
-            BuildDropdown.Default = v.Default 
-        end
-        BuildDropdown.Values = v.Table
-        ElementsCollection[Name][v.Title]  = Tab:AddDropdown(v.Title,BuildDropdown)  
-        ElementsCollection[Name][v.Title]:OnChanged(v.OnChange)
-    elseif v.Mode == "TextBox" then 
-        local BuildTextBox = {}
-        BuildTextBox.Title = v.Title
-        BuildTextBox.Callback = v.Callback
-        BuildTextBox.Finished = v.Finished
-        ElementsCollection[Name][v.Title]  = Tab:AddInput(v.Title,BuildTextBox)  
-    end
-end
-for _,Name in pairs(UiOrders) do
-    TabCollections[Name] = Window:AddTab({ Title = Name, Icon = "" })
-    local Tab = TabCollections[Name]
-    for i,v in pairs(UiIntilize[Name]) do   
-        if type(v)== 'function' then 
-            for i2,v2 in pairs(v()) do
-                BuildUI(Tab,i2,v2,Name)
-            end
-        else
-            BuildUI(Tab,i,v,Name)
-        end
-
-    end
-end
-return Title, SubTitle, ElementsCollection
-
-     Headers: table: 0x92547b3cdb89cd9b
-
-
-     StatusMessage: OK
-     Success: true
-     StatusCode: 200
-     Body: repeat wait()
+            Title = "sorry but i wil code script kaitun ",
+            Description = "Do Not Farm Levels Too Fast Or Enjoy Getting Reseted",
+         end
+        
 until getgenv().LoadUi and getgenv().IslandCaller and getgenv().SettingManager 
 local Title = "W-azure" .. (getgenv().Premium and " [Premium]" or "")
 local SubTitle = "True V2 discord.gg/w-azure"
